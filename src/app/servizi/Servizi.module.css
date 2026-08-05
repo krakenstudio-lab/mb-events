@@ -1,0 +1,189 @@
+.serviziHero {
+  padding: 6rem 0 4rem 0;
+  text-align: center;
+  background: radial-gradient(circle at 50% 20%, rgba(0, 210, 255, 0.05) 0%, transparent 60%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle span {
+  color: var(--accent-cyan);
+}
+
+.heroText {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* Service Blocks */
+.serviceBlock {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.serviceBlock:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.serviceBlock:nth-child(even) .serviceGrid {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.serviceBlock:nth-child(even) .serviceImageWrapper {
+  order: -1;
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceTagline {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.serviceTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.serviceDesc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Features List */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.featureItem svg {
+  flex-shrink: 0;
+  color: var(--accent-cyan);
+}
+
+/* Applications */
+.appsWrapper {
+  margin-bottom: 2.5rem;
+}
+
+.appsTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.appsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.appTag {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.appTag:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* Images */
+.serviceImageWrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+}
+
+.serviceImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.serviceImageWrapper:hover .serviceImage {
+  transform: scale(1.02);
+}
+
+/* CTA */
+.customSolutionSection {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.05) 0%, transparent 70%);
+  text-align: center;
+}
+
+.customSolutionContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.customTitle {
+  composes: gradient-heading from global;
+}
+
+.customDesc {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .serviceGrid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+  }
+  .serviceBlock:nth-child(even) .serviceImageWrapper {
+    order: 0;
+  }
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
