@@ -1,0 +1,144 @@
+.cookieHero {
+  padding: 5rem 0 4rem 0;
+  text-align: left !important;
+  background-color: #0c161b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+.heroContent {
+  max-width: 750px;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+
+.heroTitle {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+  text-align: left !important;
+  width: 100%;
+}
+
+.titleGradient,
+.heroTitle span {
+  background: linear-gradient(90deg, #26d0ce 0%, #2bd0c6 30%, #5ad8a1 55%, #f4bf39 75%, #f9a620 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  display: inline-block;
+}
+
+.heroText {
+  color: rgba(220, 230, 240, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: left !important;
+  max-width: 700px;
+}
+
+.cookieContentSection {
+  background-color: #070d10;
+}
+
+.cookieCard {
+  background: rgba(12, 22, 27, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.policyArticle {
+  margin-bottom: 2.5rem;
+}
+
+.policyArticle:last-child {
+  margin-bottom: 0;
+}
+
+.policyArticle h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
+}
+
+.policyArticle h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2bd0c6;
+  margin: 1.2rem 0 0.5rem 0;
+}
+
+.policyArticle p {
+  color: rgba(220, 230, 240, 0.75);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.policyArticle ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: rgba(220, 230, 240, 0.75);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.policyArticle li {
+  margin-bottom: 0.5rem;
+}
+
+.policyArticle a {
+  color: #2bd0c6;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.policyArticle a:hover {
+  color: #ffffff;
+}
+
+.cookieTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.cookieTable th,
+.cookieTable td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cookieTable th {
+  background-color: rgba(15, 25, 35, 0.8);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.cookieTable td {
+  color: rgba(220, 230, 240, 0.75);
+}
+
+.cookieTable code {
+  color: #2bd0c6;
+  background-color: rgba(43, 208, 198, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}

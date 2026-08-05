@@ -1,0 +1,171 @@
+/* Persistent Bottom Left Trigger Button */
+.cookieTriggerBtn {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 9998;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(12, 22, 27, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(43, 208, 198, 0.3);
+  color: #2bd0c6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(43, 208, 198, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cookieTriggerBtn:hover {
+  background: rgba(43, 208, 198, 0.15);
+  border-color: #2bd0c6;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(43, 208, 198, 0.4);
+}
+
+/* Floating Banner */
+.cookieBanner {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: calc(100% - 3rem);
+  max-width: 960px;
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bannerContainer {
+  background: rgba(12, 22, 27, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(43, 208, 198, 0.3);
+  border-radius: 16px;
+  padding: 1.2rem 1.8rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(43, 208, 198, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(43, 208, 198, 0.1);
+  border: 1px solid rgba(43, 208, 198, 0.2);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.bannerText {
+  font-size: 0.88rem;
+  color: rgba(220, 230, 240, 0.85);
+  line-height: 1.5;
+}
+
+.link {
+  color: #2bd0c6;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.bannerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.rejectBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .3rem 1rem;
+  background: rgba(15, 25, 35, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.rejectBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.acceptBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .3rem 1rem;
+  background: #1fc5be;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(31, 197, 190, 0.35);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.acceptBtn:hover {
+  background: #27dbd3;
+  box-shadow: 0 6px 25px rgba(31, 197, 190, 0.5);
+  transform: translateY(-1px);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cookieTriggerBtn {
+    bottom: 1rem;
+    left: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+  .bannerContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  
+  .bannerActions {
+    justify-content: flex-end;
+  }
+}

@@ -4,17 +4,19 @@ import styles from "./Servizi.module.css";
 
 export default function Servizi() {
   const checkIcon = (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
   );
 
   return (
     <>
       {/* Hero */}
       <section className={styles.serviziHero}>
-        <div className={`${styles.heroContainer} container`}>
+        <div className="container">
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              I Nostri <span>Servizi</span>
+              I Nostri <span className={styles.titleGradient}>Servizi</span>
             </h1>
             <p className={styles.heroText}>
               Soluzioni tecniche complete per ogni tipologia di evento. Dalla progettazione alla realizzazione, il nostro team di esperti è al tuo fianco per creare esperienze straordinarie.
@@ -24,14 +26,23 @@ export default function Servizi() {
       </section>
 
       {/* Service 1: Audio */}
-      <section id="audio" className={`${styles.serviceBlock} section-padding`}>
+      <section id="audio" className={`${styles.serviceBlock} ${styles.bgPrimary} section-padding`}>
         <div className="container">
           <div className={styles.serviceGrid}>
             <div className={styles.serviceContent}>
-              <span className={styles.serviceTagline}>Suono professionale per ogni occasione</span>
+              <div className={styles.taglineWrapper}>
+                <div className={styles.taglineIconBox}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                  </svg>
+                </div>
+                <span className={styles.taglineText}>SUONO PROFESSIONALE PER OGNI OCCASIONE</span>
+              </div>
+              
               <h2 className={styles.serviceTitle}>Service Audio</h2>
               <p className={styles.serviceDesc}>
-                Offriamo sistemi audio all'avanguardia per concerti, festival, conferenze ed eventi aziendali. Dalla piccola sala congressi al grande palco outdoor, garantiamo sempre la massima qualità sonora con impianti dimensionali ad hoc.
+                Offriamo sistemi audio all'avanguardia per concerti, festival, conferenze ed eventi aziendali. Dalla piccola sala congressi al grande palco outdoor, garantiamo sempre la massima qualità sonora con impianti dimensionati ad hoc.
               </p>
               
               <div className={styles.featuresGrid}>
@@ -44,7 +55,7 @@ export default function Servizi() {
               </div>
 
               <div className={styles.appsWrapper}>
-                <h3 className={styles.appsTitle}>Applicazioni</h3>
+                <h3 className={styles.appsTitle}>APPLICAZIONI</h3>
                 <div className={styles.appsList}>
                   <span className={styles.appTag}>Concerti e Festival</span>
                   <span className={styles.appTag}>Conferenze e Convention</span>
@@ -53,32 +64,56 @@ export default function Servizi() {
                 </div>
               </div>
 
-              <Link href="/contatti" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
+              <Link href="/contatti" className={styles.serviceBtn}>
                 Richiedi Informazioni &rarr;
               </Link>
             </div>
             <div className={styles.serviceImageWrapper}>
-              <Image
-                src="/images/audio_console.png"
-                alt="Professional audio console mixing"
-                width={600}
-                height={400}
-                className={styles.serviceImage}
-              />
+              <div className={styles.serviceImageInner}>
+                <Image
+                  src="/images/audio_console.png"
+                  alt="Professional audio console mixing"
+                  width={680}
+                  height={425}
+                  className={styles.serviceImage}
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service 2: Luci */}
-      <section id="luci" className={`${styles.serviceBlock} section-padding`}>
+      <section id="luci" className={`${styles.serviceBlock} ${styles.bgSecondary} section-padding`}>
         <div className="container">
-          <div className={styles.serviceGrid}>
+          <div className={styles.serviceGridAlt}>
+            <div className={styles.serviceImageWrapper}>
+              <div className={styles.serviceImageInner}>
+                <Image
+                  src="/images/stage_lights.png"
+                  alt="Concert stage lights installation"
+                  width={680}
+                  height={425}
+                  className={styles.serviceImage}
+                />
+              </div>
+            </div>
             <div className={styles.serviceContent}>
-              <span className={styles.serviceTagline}>Illuminazione che crea emozioni</span>
+              <div className={styles.taglineWrapper}>
+                <div className={styles.taglineIconBox}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1.55.62 2.96 1.63 4 .76.76 1.23 1.52 1.41 2.5"></path>
+                  </svg>
+                </div>
+                <span className={styles.taglineText}>ILLUMINAZIONE CHE CREA EMOZIONI</span>
+              </div>
+
               <h2 className={styles.serviceTitle}>Service Luci</h2>
               <p className={styles.serviceDesc}>
-                Il nostro servizio di illuminazione professionale trasforma qualsiasi ambiente in uno spazio suggestivo. Dalle teste mobili agli effetti LED, passando per l'illuminazione architetturale, creiamo atmosfere che amplificano l'impatto emotivo di ogni evento.
+                Il nostro servizio di illuminazione professionale trasforma qualsiasi ambiente in uno spazio suggestivo. Dalle teste mobili agli effetti LED, passando per l'illuminazione architetturale, creiamo atmosfere uniche che amplificano l'impatto emotivo di ogni evento.
               </p>
               
               <div className={styles.featuresGrid}>
@@ -91,7 +126,7 @@ export default function Servizi() {
               </div>
 
               <div className={styles.appsWrapper}>
-                <h3 className={styles.appsTitle}>Applicazioni</h3>
+                <h3 className={styles.appsTitle}>APPLICAZIONI</h3>
                 <div className={styles.appsList}>
                   <span className={styles.appTag}>Show e Concerti</span>
                   <span className={styles.appTag}>Eventi Fashion</span>
@@ -100,29 +135,29 @@ export default function Servizi() {
                 </div>
               </div>
 
-              <Link href="/contatti" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
+              <Link href="/contatti" className={styles.serviceBtn}>
                 Richiedi Informazioni &rarr;
               </Link>
-            </div>
-            <div className={styles.serviceImageWrapper}>
-              <Image
-                src="/images/stage_lights.png"
-                alt="Concert stage lights installation"
-                width={600}
-                height={400}
-                className={styles.serviceImage}
-              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Service 3: Video */}
-      <section id="video" className={`${styles.serviceBlock} section-padding`}>
+      <section id="video" className={`${styles.serviceBlock} ${styles.bgPrimary} section-padding`}>
         <div className="container">
           <div className={styles.serviceGrid}>
             <div className={styles.serviceContent}>
-              <span className={styles.serviceTagline}>Visual technology di impatto</span>
+              <div className={styles.taglineWrapper}>
+                <div className={styles.taglineIconBox}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  </svg>
+                </div>
+                <span className={styles.taglineText}>VISUAL TECHNOLOGY DI IMPATTO</span>
+              </div>
+
               <h2 className={styles.serviceTitle}>Service Video</h2>
               <p className={styles.serviceDesc}>
                 Dalla regia multicamera ai ledwall di grande formato, offriamo soluzioni video complete per ogni tipologia di evento. Trasmettiamo in streaming, creiamo contenuti video in real-time e gestiamo proiezioni mapping che lasciano senza fiato.
@@ -138,7 +173,7 @@ export default function Servizi() {
               </div>
 
               <div className={styles.appsWrapper}>
-                <h3 className={styles.appsTitle}>Applicazioni</h3>
+                <h3 className={styles.appsTitle}>APPLICAZIONI</h3>
                 <div className={styles.appsList}>
                   <span className={styles.appTag}>Conferenze e Presentazioni</span>
                   <span className={styles.appTag}>Festival e Concerti</span>
@@ -147,29 +182,54 @@ export default function Servizi() {
                 </div>
               </div>
 
-              <Link href="/contatti" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
+              <Link href="/contatti" className={styles.serviceBtn}>
                 Richiedi Informazioni &rarr;
               </Link>
             </div>
             <div className={styles.serviceImageWrapper}>
-              <Image
-                src="/images/corporate_event.png"
-                alt="Ledwall corporate display setup"
-                width={600}
-                height={400}
-                className={styles.serviceImage}
-              />
+              <div className={styles.serviceImageInner}>
+                <Image
+                  src="/images/corporate_event.png"
+                  alt="Ledwall corporate display setup"
+                  width={680}
+                  height={425}
+                  className={styles.serviceImage}
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service 4: Strutture */}
-      <section id="strutture" className={`${styles.serviceBlock} section-padding`}>
+      <section id="strutture" className={`${styles.serviceBlock} ${styles.bgSecondary} section-padding`}>
         <div className="container">
-          <div className={styles.serviceGrid}>
+          <div className={styles.serviceGridAlt}>
+            <div className={styles.serviceImageWrapper}>
+              <div className={styles.serviceImageInner}>
+                <Image
+                  src="/images/truss_structure.png"
+                  alt="Stage truss structure layout"
+                  width={680}
+                  height={425}
+                  className={styles.serviceImage}
+                />
+              </div>
+            </div>
             <div className={styles.serviceContent}>
-              <span className={styles.serviceTagline}>La base solida per ogni evento</span>
+              <div className={styles.taglineWrapper}>
+                <div className={styles.taglineIconBox}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="3" y1="15" x2="21" y2="15"></line>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                  </svg>
+                </div>
+                <span className={styles.taglineText}>LA BASE SOLIDA PER OGNI EVENTO</span>
+              </div>
+
               <h2 className={styles.serviceTitle}>Strutture e Allestimenti</h2>
               <p className={styles.serviceDesc}>
                 Progettiamo e realizziamo strutture su misura per ogni tipologia di evento. Dai palchi modulari alle americane per appendere luci e audio, garantiamo sicurezza certificata e soluzioni creative per qualsiasi esigenza tecnica e logistica.
@@ -185,7 +245,7 @@ export default function Servizi() {
               </div>
 
               <div className={styles.appsWrapper}>
-                <h3 className={styles.appsTitle}>Applicazioni</h3>
+                <h3 className={styles.appsTitle}>APPLICAZIONI</h3>
                 <div className={styles.appsList}>
                   <span className={styles.appTag}>Concerti e Festival Outdoor</span>
                   <span className={styles.appTag}>Fiere ed Eventi Corporate</span>
@@ -194,18 +254,9 @@ export default function Servizi() {
                 </div>
               </div>
 
-              <Link href="/contatti" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
+              <Link href="/contatti" className={styles.serviceBtn}>
                 Richiedi Informazioni &rarr;
               </Link>
-            </div>
-            <div className={styles.serviceImageWrapper}>
-              <Image
-                src="/images/truss_structure.png"
-                alt="Stage truss structure layout"
-                width={600}
-                height={400}
-                className={styles.serviceImage}
-              />
             </div>
           </div>
         </div>
@@ -215,13 +266,13 @@ export default function Servizi() {
       <section className={`${styles.customSolutionSection} section-padding`}>
         <div className={`${styles.customSolutionContainer} container`}>
           <h2 className={styles.customTitle}>
-            Hai Bisogno di Una <span className="gold">Soluzione Personalizzata</span>?
+            Hai Bisogno di Una <span className={styles.titleGradient}>Soluzione Personalizzata</span>?
           </h2>
           <p className={styles.customDesc}>
-            Ogni evento è unico. Contattaci oggi stesso per discutere le tue esigenze specifiche e ricevere una proposta tecnica e commerciale su misura per il tuo progetto.
+            Ogni evento è unico. Contattaci per discutere le tue esigenze specifiche e ricevere una proposta su misura.
           </p>
-          <Link href="/contatti" className="btn btn-primary">
-            Contattaci Ora
+          <Link href="/contatti" className={styles.ctaBtn}>
+            Contattaci Ora &rarr;
           </Link>
         </div>
       </section>

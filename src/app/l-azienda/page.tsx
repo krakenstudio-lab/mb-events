@@ -4,12 +4,12 @@ import styles from "./Azienda.module.css";
 export default function Lazienda() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero / Chi Siamo */}
       <section className={styles.aziendaHero}>
-        <div className={`${styles.heroContainer} container`}>
+        <div className="container">
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Chi <span>Siamo</span>
+              Chi <span className={styles.titleGradient}>Siamo</span>
             </h1>
             <p className={styles.heroText}>
               MB Events nasce dalla passione per lo spettacolo e dalla volontà di creare esperienze che lasciano il segno. Siamo un team di professionisti dedicati all'eccellenza nel service tecnico per eventi.
@@ -23,8 +23,8 @@ export default function Lazienda() {
         <div className="container">
           <div className={styles.historyGrid}>
             <div className={styles.historyContent}>
-              <h2 className="gradient-heading">
-                La Nostra <span className="gold">Storia</span>
+              <h2 className={styles.historyTitle}>
+                La Nostra <span className={styles.titleGradient}>Storia</span>
               </h2>
               <p className={styles.historyText}>
                 Fondata nel 2008, MB Events è nata dalla visione di un gruppo di tecnici audio-video che condividevano un sogno: trasformare gli eventi in esperienze sensoriali complete.
@@ -37,13 +37,16 @@ export default function Lazienda() {
               </p>
             </div>
             <div className={styles.historyImageWrapper}>
-              <Image
-                src="/images/stage_lights.png"
-                alt="MB Events History concert stage lights"
-                width={600}
-                height={400}
-                className={styles.historyImage}
-              />
+              <div className={styles.historyImageInner}>
+                <Image
+                  src="/images/stage_lights.png"
+                  alt="MB Events History concert stage lights"
+                  width={680}
+                  height={425}
+                  className={styles.historyImage}
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -78,17 +81,20 @@ export default function Lazienda() {
         <div className="container">
           <div className={styles.missionGrid}>
             <div className={styles.missionImageWrapper}>
-              <Image
-                src="/images/truss_structure.png"
-                alt="MB Events Mission stage structure setup"
-                width={600}
-                height={400}
-                className={styles.missionImage}
-              />
+              <div className={styles.missionImageInner}>
+                <Image
+                  src="/images/truss_structure.png"
+                  alt="MB Events Mission stage structure setup"
+                  width={680}
+                  height={425}
+                  className={styles.missionImage}
+                  priority
+                />
+              </div>
             </div>
             <div className={styles.missionContent}>
-              <h2 className="gradient-heading">
-                La Nostra <span className="gold">Missione</span>
+              <h2 className={styles.missionTitle}>
+                La Nostra <span className={styles.titleGradient}>Missione</span>
               </h2>
               <p className={styles.missionText}>
                 La nostra missione è semplice ma ambiziosa: creare esperienze immersive che superino le aspettative di ogni cliente. Non ci limitiamo a fornire attrezzature tecniche – progettiamo emozioni.
@@ -105,11 +111,11 @@ export default function Lazienda() {
       </section>
 
       {/* Values */}
-      <section className="section-padding">
+      <section className={`${styles.valuesSection} section-padding`}>
         <div className="container">
           <div className={styles.valuesTitleArea}>
-            <h2 className="gradient-heading">
-              I Nostri <span className="gold">Valori</span>
+            <h2 className={styles.valuesTitle}>
+              I Nostri <span className={styles.titleGradient}>Valori</span>
             </h2>
             <p className={styles.valuesSubtitle}>
               I principi che guidano ogni nostro progetto e relazione.
@@ -168,32 +174,34 @@ export default function Lazienda() {
       <section className={`${styles.teamSection} section-padding`}>
         <div className="container">
           <div className={styles.teamTitleArea}>
-            <h2 className="gradient-heading">
-              Il Nostro <span className="gold">Team</span>
+            <h2 className={styles.teamTitle}>
+              Il Nostro <span className={styles.titleGradient}>Team</span>
             </h2>
             <p className={styles.teamSubtitle}>
               Un gruppo di professionisti appassionati, uniti dalla voglia di creare eventi straordinari. Ogni membro del nostro team porta competenze uniche e un'energia contagiosa in ogni progetto.
             </p>
           </div>
 
-          <div className={styles.teamGrid}>
-            <div className={styles.teamCard}>
-              <h3 className={styles.teamRole}>Direzione Tecnica</h3>
-              <p className={styles.teamDesc}>
-                Ingegneri e tecnici specializzati con anni di esperienza nel settore, pronti a risolvere ogni sfida logistica o strutturale.
-              </p>
-            </div>
-            <div className={styles.teamCard}>
-              <h3 className={styles.teamRole}>Creativi</h3>
-              <p className={styles.teamDesc}>
-                Light designer, 3D visual artist e programmatori luci che trasformano ogni spazio e creano regie visive mozzafiato.
-              </p>
-            </div>
-            <div className={styles.teamCard}>
-              <h3 className={styles.teamRole}>Operatori</h3>
-              <p className={styles.teamDesc}>
-                Tecnici audio, video e rigger esperti sul campo che garantiscono un'installazione e una gestione dell'evento impeccabili.
-              </p>
+          <div className={styles.teamContainerCard}>
+            <div className={styles.teamGrid}>
+              <div className={styles.teamItem}>
+                <h3 className={styles.teamRole}>Direzione Tecnica</h3>
+                <p className={styles.teamDesc}>
+                  Ingegneri e tecnici specializzati con anni di esperienza nel settore.
+                </p>
+              </div>
+              <div className={styles.teamItem}>
+                <h3 className={styles.teamRole}>Creativi</h3>
+                <p className={styles.teamDesc}>
+                  Light designer e visual artist che trasformano ogni spazio.
+                </p>
+              </div>
+              <div className={styles.teamItem}>
+                <h3 className={styles.teamRole}>Operatori</h3>
+                <p className={styles.teamDesc}>
+                  Tecnici sul campo che garantiscono esecuzione impeccabile.
+                </p>
+              </div>
             </div>
           </div>
         </div>

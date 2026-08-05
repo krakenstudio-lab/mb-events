@@ -12,23 +12,45 @@ export default function Contatti() {
     messaggio: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API request
-    console.log("Submit request:", formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Impossibile inviare il messaggio.");
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error("Submit error:", err);
+      setErrorMsg(err?.message || "Si è verificato un errore durante l'invio. Riprova più tardi.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       {/* Hero */}
       <section className={styles.contattiHero}>
-        <div className={`${styles.heroContainer} container`}>
+        <div className="container">
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              <span>Contattaci</span>
+              <span className={styles.titleGradient}>Contattaci</span>
             </h1>
             <p className={styles.heroText}>
               Siamo qui per trasformare la tua visione in realtà. Raccontaci il tuo progetto e riceverai un preventivo personalizzato entro 24 ore.
@@ -38,7 +60,7 @@ export default function Contatti() {
       </section>
 
       {/* Main Section */}
-      <section className="section-padding" style={{ paddingTop: "2rem" }}>
+      <section className={`${styles.mainContactSection} section-padding`}>
         <div className="container">
           <div className={styles.contactGrid}>
             
@@ -48,11 +70,11 @@ export default function Contatti() {
               
               {submitted ? (
                 <div style={{ textAlign: "center", padding: "2rem 0" }}>
-                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: "1rem" }}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                  <h3 style={{ marginBottom: "1rem", fontSize: "1.5rem" }}>Richiesta Inviata!</h3>
-                  <p style={{ color: "var(--text-secondary)" }}>Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: "1rem" }}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <h3 style={{ marginBottom: "1rem", fontSize: "1.5rem", color: "#ffffff" }}>Richiesta Inviata!</h3>
+                  <p style={{ color: "rgba(220, 230, 240, 0.75)" }}>Grazie per averci contattato. Ti risponderemo il prima possibile.</p>
                   <button 
-                    className="btn btn-secondary" 
+                    className={styles.submitBtn} 
                     style={{ marginTop: "2rem" }} 
                     onClick={() => { setSubmitted(false); setFormData({ nome: "", email: "", telefono: "", tipoEvento: "", messaggio: "" }); }}
                   >
@@ -133,9 +155,15 @@ export default function Contatti() {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className={`${styles.submitBtn} btn btn-primary`}>
-                    Invia Richiesta
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  {errorMsg && (
+                    <div style={{ color: "#ff5555", fontSize: "0.88rem", marginBottom: "1rem", backgroundColor: "rgba(255, 85, 85, 0.1)", padding: "0.6rem 1rem", borderRadius: "6px", border: "1px solid rgba(255, 85, 85, 0.2)" }}>
+                      {errorMsg}
+                    </div>
+                  )}
+
+                  <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                    {isSubmitting ? "Invio in corso..." : "Invia Richiesta"}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                   </button>
                 </form>
               )}
@@ -148,7 +176,7 @@ export default function Contatti() {
               {/* Address */}
               <div className={styles.infoCard}>
                 <div className={styles.infoIcon}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
                 <div className={styles.infoContent}>
                   <span className={styles.infoLabel}>Indirizzo</span>
@@ -159,7 +187,7 @@ export default function Contatti() {
               {/* Phone */}
               <div className={styles.infoCard}>
                 <div className={styles.infoIcon}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 </div>
                 <div className={styles.infoContent}>
                   <span className={styles.infoLabel}>Telefono</span>
@@ -170,7 +198,7 @@ export default function Contatti() {
               {/* Email */}
               <div className={styles.infoCard}>
                 <div className={styles.infoIcon}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
                 <div className={styles.infoContent}>
                   <span className={styles.infoLabel}>Email</span>
@@ -181,7 +209,7 @@ export default function Contatti() {
               {/* Hours */}
               <div className={styles.infoCard}>
                 <div className={styles.infoIcon}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </div>
                 <div className={styles.infoContent}>
                   <span className={styles.infoLabel}>Orari</span>
@@ -189,10 +217,10 @@ export default function Contatti() {
                 </div>
               </div>
 
-              {/* Abstract Map */}
+              {/* Abstract Map Card */}
               <div className={styles.mapCard}>
                 <div className={styles.mapMarkerIcon}>
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2bd0c6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
                 <span className={styles.mapLabel}>Via dell'Innovazione, 42<br />Milano, Italia</span>
               </div>

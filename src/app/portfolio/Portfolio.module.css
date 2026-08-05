@@ -1,68 +1,95 @@
+/* Portfolio Hero Section */
 .portfolioHero {
-  padding: 6rem 0 4rem 0;
-  text-align: center;
-  background: radial-gradient(circle at 50% 20%, rgba(0, 210, 255, 0.05) 0%, transparent 60%);
+  padding: 5rem 0 4rem 0;
+  text-align: left !important;
+  background-color: #0c161b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
 }
 
 .heroContent {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 750px;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
 }
 
 .heroTitle {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+  text-align: left !important;
+  width: 100%;
 }
 
+.titleGradient,
 .heroTitle span {
-  background: var(--accent-gold-gradient);
+  background: linear-gradient(90deg, #26d0ce 0%, #2bd0c6 30%, #5ad8a1 55%, #f4bf39 75%, #f9a620 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  display: inline-block;
 }
 
 .heroText {
-  color: var(--text-secondary);
-  font-size: 1.15rem;
-  line-height: 1.8;
+  color: rgba(220, 230, 240, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: left !important;
+  max-width: 700px;
 }
 
-/* Filters */
+/* Projects Section */
+.projectsSection {
+  background-color: #070d10;
+}
+
+/* Filters Bar */
 .filtersContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.8rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   flex-wrap: wrap;
 }
 
 .filterBtn {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-  padding: 0.6rem 1.4rem;
-  border-radius: 8px;
+  background-color: rgba(15, 25, 35, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(220, 230, 240, 0.8);
+  padding: .3rem 1rem;
+  border-radius: 6px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.2s ease;
 }
 
 .filterBtn:hover {
-  color: var(--text-primary);
-  border-color: var(--text-muted);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .activeFilterBtn {
-  background-color: var(--accent-cyan);
-  color: #000;
-  border-color: var(--accent-cyan);
-  box-shadow: 0 0 15px rgba(0, 210, 255, 0.25);
+  background-color: #1fc5be;
+  color: #ffffff;
+  border-color: #1fc5be;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(31, 197, 190, 0.35);
 }
 
 .activeFilterBtn:hover {
-  color: #000;
-  border-color: var(--accent-cyan);
+  background-color: #27dbd3;
+  color: #ffffff;
+  border-color: #27dbd3;
 }
 
 /* Projects Grid */
@@ -77,16 +104,15 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 320px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--card-shadow);
+  height: 295px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   cursor: pointer;
   display: block;
 }
 
 .projectImage {
   object-fit: cover;
-  transition: transform var(--transition-normal);
+  transition: transform 0.5s ease;
 }
 
 .projectOverlay {
@@ -95,7 +121,7 @@
   left: 0;
   width: 100%;
   padding: 2.5rem 1.8rem 1.8rem 1.8rem;
-  background: linear-gradient(to top, rgba(7, 13, 16, 0.95) 0%, rgba(7, 13, 16, 0.7) 50%, transparent 100%);
+  background: linear-gradient(to top, rgba(7, 13, 16, 0.95) 0%, rgba(7, 13, 16, 0.4) 60%, transparent 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -104,26 +130,32 @@
 
 .projectMeta {
   display: flex;
-  gap: 0.8rem;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.4rem;
 }
 
 .projectCategory {
-  color: var(--accent-cyan);
+  color: #2bd0c6;
+}
+
+.metaDot {
+  color: rgba(220, 230, 240, 0.5);
 }
 
 .projectYear {
-  color: var(--text-muted);
+  color: rgba(220, 230, 240, 0.5);
 }
 
 .projectTitle {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
+  line-height: 1.3;
 }
 
 .projectCard:hover .projectImage {
@@ -142,9 +174,5 @@
   }
   .filtersContainer {
     gap: 0.5rem;
-  }
-  .filterBtn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
   }
 }

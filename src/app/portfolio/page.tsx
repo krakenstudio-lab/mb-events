@@ -64,10 +64,10 @@ export default function Portfolio() {
     <>
       {/* Hero */}
       <section className={styles.portfolioHero}>
-        <div className={`${styles.heroContainer} container`}>
+        <div className="container">
           <div className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Il Nostro <span>Portfolio</span>
+              Il Nostro <span className={styles.titleGradient}>Portfolio</span>
             </h1>
             <p className={styles.heroText}>
               Una selezione dei nostri progetti più significativi. Ogni evento racconta una storia di passione, tecnologia e dedizione al dettaglio.
@@ -77,7 +77,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Gallery */}
-      <section className="section-padding" style={{ paddingTop: "2rem" }}>
+      <section className={`${styles.projectsSection} section-padding`}>
         <div className="container">
           {/* Category tabs */}
           <div className={styles.filtersContainer}>
@@ -108,6 +108,7 @@ export default function Portfolio() {
                 <div className={styles.projectOverlay}>
                   <div className={styles.projectMeta}>
                     <span className={styles.projectCategory}>{project.category}</span>
+                    <span className={styles.metaDot}>•</span>
                     <span className={styles.projectYear}>{project.year}</span>
                   </div>
                   <h2 className={styles.projectTitle}>{project.title}</h2>
