@@ -55,7 +55,7 @@
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 3rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Form Card Styling */
@@ -64,6 +64,8 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .formTitle {
@@ -163,26 +165,37 @@
 
 /* Info Side Styling */
 .infoColumn {
+  background: rgba(12, 22, 27, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
 }
 
 .infoTitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 1rem;
 }
 
 .infoCard {
-  background: rgba(12, 22, 27, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(7, 13, 16, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
-  padding: 1.2rem 1.5rem;
+  padding: 1.1rem 1.4rem;
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin-bottom: 1rem;
   transition: border-color 0.3s ease;
 }
 
@@ -225,36 +238,33 @@
   color: #2bd0c6;
 }
 
-/* Map Card Placeholder */
+/* Map Section */
+.mapSection {
+  margin-top: 3rem;
+  width: 100%;
+}
+
 .mapCard {
   background: rgba(12, 22, 27, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  border-radius: 16px;
+  height: 380px;
   position: relative;
   overflow: hidden;
-  gap: 0.8rem;
-  padding: 1.5rem;
-  text-align: center;
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 18px 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.mapMarkerIcon {
-  color: #2bd0c6;
-  filter: drop-shadow(0 0 10px rgba(43, 208, 198, 0.5));
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.2) contrast(1.05) invert(0.9) hue-rotate(180deg);
+  border-radius: 16px;
+  transition: filter 0.3s ease;
 }
 
-.mapLabel {
-  font-size: 0.88rem;
-  color: rgba(220, 230, 240, 0.75);
-  font-weight: 500;
-  line-height: 1.4;
+.mapIframe:hover {
+  filter: grayscale(0) contrast(1) invert(0) hue-rotate(0deg);
 }
 
 @media (max-width: 992px) {

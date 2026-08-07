@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
             <div className={styles.policyArticle}>
               <h2>1. Titolare del Trattamento</h2>
               <p>
-                Il Titolare del trattamento dei dati personali è <strong>MB Events S.r.l.</strong>, con sede legale in Via dell'Innovazione 42, 20121 Milano (MI), Italia.<br />
+                Il Titolare del trattamento dei dati personali è <strong>MB Events S.r.l.</strong>, con sede legale in Via Comacchio 592, 44124 Ferrara (FE), Italia.<br />
                 Email di contatto per la privacy: <a href="mailto:info@mbevents.eu">info@mbevents.eu</a>
               </p>
             </div>

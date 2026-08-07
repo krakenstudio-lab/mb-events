@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | MB Events",
   },
   description: "Noleggio e installazione impianti audio, luci, video e strutture per concerti, eventi aziendali, sfilate di moda e matrimoni in tutta Italia.",
-  keywords: ["Service Audio", "Service Luci", "Service Video", "Allestimenti Eventi", "Noleggio Impianti", "Milano", "MB Events"],
+  keywords: ["Service Audio", "Service Luci", "Service Video", "Allestimenti Eventi", "Noleggio Impianti", "Ferrara", "MB Events"],
   authors: [{ name: "MB Events" }],
   creator: "MB Events",
   metadataBase: new URL("https://mbevents.eu"),
