@@ -41,8 +41,8 @@ export default function WipPage() {
           <a href="mailto:info@mbevents.eu" className="btn btn-primary">
             info@mbevents.eu
           </a>
-          <a href="tel:+390212345678" className="btn btn-secondary">
-            +39 02 1234 5678
+          <a href="tel:+393459734844" className="btn btn-secondary">
+            +39 345 973 4844
           </a>
         </div>
       </div>
