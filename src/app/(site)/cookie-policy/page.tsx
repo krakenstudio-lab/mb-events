@@ -12,7 +12,7 @@ export default function CookiePolicy() {
               Cookie <span className={styles.titleGradient}>Policy</span>
             </h1>
             <p className={styles.heroText}>
-              Informativa estesa sull'utilizzo dei cookie e delle tecnologie di tracciamento sul sito MB Events.
+              Informativa estesa sull&apos;utilizzo dei cookie e delle tecnologie di tracciamento sul sito MB Events.
             </p>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function CookiePolicy() {
 
               <h3>a. Cookie Tecnici ed Essenziali (Sempre Attivi)</h3>
               <p>
-                Questi cookie sono indispensabili per il corretto funzionamento del sito web e per consentire all'utente di navigare e fruire dei servizi (ad esempio, per memorizzare le preferenze sul consenso dei cookie tramite il banner). Non richiedono il preventivo consenso dell'utente per essere installati.
+                Questi cookie sono indispensabili per il corretto funzionamento del sito web e per consentire all&apos;utente di navigare e fruire dei servizi (ad esempio, per memorizzare le preferenze sul consenso dei cookie tramite il banner). Non richiedono il preventivo consenso dell&apos;utente per essere installati.
               </p>
 
               <h3>b. Cookie Analitici ed Statistici</h3>
@@ -45,7 +45,7 @@ export default function CookiePolicy() {
 
               <h3>c. Cookie di Terze Parti</h3>
               <p>
-                Durante la navigazione sul sito, l'utente potrebbe ricevere sul suo terminale anche cookie che vengono inviati da siti o da web server diversi (c.d. "terze parti"), sui quali possono risiedere alcuni elementi (quali, ad esempio, mappe interattive, video di YouTube, pulsanti social).
+                Durante la navigazione sul sito, l&apos;utente potrebbe ricevere sul suo terminale anche cookie che vengono inviati da siti o da web server diversi (c.d. &quot;terze parti&quot;), sui quali possono risiedere alcuni elementi (quali, ad esempio, mappe interattive, video di YouTube, pulsanti social).
               </p>
             </div>
 
@@ -64,13 +64,13 @@ export default function CookiePolicy() {
                   <tr>
                     <td><code>mbevents_cookie_consent</code></td>
                     <td>MB Events (Prima parte)</td>
-                    <td>Memorizza il consenso o rifiuto espresso dall'utente nel banner cookie.</td>
+                    <td>Memorizza il consenso o rifiuto espresso dall&apos;utente nel banner cookie.</td>
                     <td>1 Anno</td>
                   </tr>
                   <tr>
                     <td><code>_ga, _gid</code></td>
                     <td>Google Analytics (Terza parte)</td>
-                    <td>Statistiche anonimizzate sull'uso del sito web.</td>
+                    <td>Statistiche anonimizzate sull&apos;uso del sito web.</td>
                     <td>Sessione / 2 Anni</td>
                   </tr>
                 </tbody>
@@ -80,7 +80,7 @@ export default function CookiePolicy() {
             <div className={styles.policyArticle}>
               <h2>4. Gestione e Disabilitazione dei Cookie tramite Browser</h2>
               <p>
-                L'utente può gestire le proprie preferenze relative ai cookie direttamente all'interno del proprio browser ed impedire – ad esempio – che terze parti possano installarne. Tramite le preferenze del browser è inoltre possibile eliminare i cookie installati in passato.
+                L&apos;utente può gestire le proprie preferenze relative ai cookie direttamente all&apos;interno del proprio browser ed impedire – ad esempio – che terze parti possano installarne. Tramite le preferenze del browser è inoltre possibile eliminare i cookie installati in passato.
               </p>
               <p>Di seguito le guide ufficiali dei principali browser:</p>
               <ul>
@@ -94,7 +94,7 @@ export default function CookiePolicy() {
             <div className={styles.policyArticle}>
               <h2>5. Contatti e Riferimenti alla Privacy Policy</h2>
               <p>
-                Per maggiori informazioni sul trattamento dei dati personali ed esercizio dei propri diritti, vi invitiamo a leggere la nostra <Link href="/privacy-policy">Privacy Policy</Link> o a contattarci all'indirizzo email <a href="mailto:info@mbevents.eu">info@mbevents.eu</a>.
+                Per maggiori informazioni sul trattamento dei dati personali ed esercizio dei propri diritti, vi invitiamo a leggere la nostra <Link href="/privacy-policy">Privacy Policy</Link> o a contattarci all&apos;indirizzo email <a href="mailto:info@mbevents.eu">info@mbevents.eu</a>.
               </p>
             </div>
           </div>

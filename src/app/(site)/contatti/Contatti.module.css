@@ -282,4 +282,8 @@
   .formCard {
     padding: 2rem 1.5rem;
   }
+  .submitBtn {
+    width: 100%;
+    align-self: stretch;
+  }
 }

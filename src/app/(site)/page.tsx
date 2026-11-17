@@ -9,7 +9,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
           <Image
-            src="/images/stage_lights.png"
+            src="/images/original/home-hero.jpg"
             alt="Stage Lights Background"
             fill
             priority
@@ -49,7 +49,7 @@ export default function Home() {
                 Il Tuo Partner per <span className={styles.partnerTitleGradient}>Eventi di Successo</span>
               </h2>
               <p className={styles.partnerDesc}>
-                Da oltre 15 anni, MB Events è sinonimo di eccellenza nel service tecnico per eventi. Il nostro team di professionisti combina passione, esperienza e tecnologia all'avanguardia per trasformare ogni progetto in un'esperienza immersiva che lascia il segno.
+                Da oltre 15 anni, MB Events è sinonimo di eccellenza nel service tecnico per eventi. Il nostro team di professionisti combina passione, esperienza e tecnologia all&apos;avanguardia per trasformare ogni progetto in un&apos;esperienza immersiva che lascia il segno.
               </p>
               <p className={styles.partnerDesc}>
                 Che si tratti di un grande concerto, un evento corporate esclusivo o un matrimonio da sogno, siamo il partner affidabile che ogni organizzatore cerca.
@@ -61,7 +61,7 @@ export default function Home() {
             <div className={styles.partnerImageWrapper}>
               <div className={styles.partnerImageInner}>
                 <Image
-                  src="/images/stage_lights.png"
+                  src="/images/original/il-tuo-partner.jpg"
                   alt="Stage lights concert setup"
                   width={680}
                   height={425}

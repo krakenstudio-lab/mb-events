@@ -20,7 +20,7 @@ export default function Footer() {
             />
           </Link>
           <p className={styles.aboutText}>
-            Trasformiamo ogni evento in un'esperienza indimenticabile con tecnologia all'avanguardia e professionalità senza compromessi.
+            Trasformiamo ogni evento in un&apos;esperienza indimenticabile con tecnologia all&apos;avanguardia e professionalità senza compromessi.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
           <h3 className={styles.colTitle}>Link Rapidi</h3>
           <ul className={styles.colList}>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/l-azienda">L'Azienda</Link></li>
+            <li><Link href="/l-azienda">L&apos;Azienda</Link></li>
             <li><Link href="/servizi">Servizi</Link></li>
             <li><Link href="/portfolio">Portfolio</Link></li>
             <li><Link href="/contatti">Contatti</Link></li>

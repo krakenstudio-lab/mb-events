@@ -587,6 +587,10 @@
     gap: 3rem;
   }
 
+  .partnerBtn {
+    align-self: center;
+  }
+
   .worksGrid {
     grid-template-columns: repeat(2, 1fr);
   }

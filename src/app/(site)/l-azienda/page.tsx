@@ -12,7 +12,7 @@ export default function Lazienda() {
               Chi <span className={styles.titleGradient}>Siamo</span>
             </h1>
             <p className={styles.heroText}>
-              MB Events nasce dalla passione per lo spettacolo e dalla volontà di creare esperienze che lasciano il segno. Siamo un team di professionisti dedicati all'eccellenza nel service tecnico per eventi.
+              MB Events nasce dalla passione per lo spettacolo e dalla volontà di creare esperienze che lasciano il segno. Siamo un team di professionisti dedicati all&apos;eccellenza nel service tecnico per eventi.
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function Lazienda() {
                 Fondata nel 2008, MB Events è nata dalla visione di un gruppo di tecnici audio-video che condividevano un sogno: trasformare gli eventi in esperienze sensoriali complete.
               </p>
               <p className={styles.historyText}>
-                Partiti da un piccolo magazzino con poche attrezzature, oggi disponiamo di un parco materiali tra i più completi d'Italia, con tecnologie sempre all'avanguardia e un team di oltre 50 professionisti altamente qualificati.
+                Partiti da un piccolo magazzino con poche attrezzature, oggi disponiamo di un parco materiali tra i più completi d&apos;Italia, con tecnologie sempre all&apos;avanguardia e un team di oltre 50 professionisti altamente qualificati.
               </p>
               <p className={styles.historyText}>
                 Nel corso degli anni abbiamo avuto il privilegio di collaborare con i più grandi artisti italiani e internazionali, le principali aziende del panorama corporate e le location più esclusive per eventi privati.
@@ -39,7 +39,7 @@ export default function Lazienda() {
             <div className={styles.historyImageWrapper}>
               <div className={styles.historyImageInner}>
                 <Image
-                  src="/images/stage_lights.png"
+                  src="/images/original/azienda-storia.jpg"
                   alt="MB Events History concert stage lights"
                   width={680}
                   height={425}
@@ -83,7 +83,7 @@ export default function Lazienda() {
             <div className={styles.missionImageWrapper}>
               <div className={styles.missionImageInner}>
                 <Image
-                  src="/images/truss_structure.png"
+                  src="/images/original/azienda-mission.jpg"
                   alt="MB Events Mission stage structure setup"
                   width={680}
                   height={425}
@@ -130,7 +130,7 @@ export default function Lazienda() {
               </div>
               <h3 className={styles.valueCardTitle}>Eccellenza</h3>
               <p className={styles.valueCardDesc}>
-                Ogni dettaglio conta. Dalla pianificazione all'esecuzione, puntiamo sempre all'eccellenza in tutto ciò che facciamo.
+                Ogni dettaglio conta. Dalla pianificazione all&apos;esecuzione, puntiamo sempre all&apos;eccellenza in tutto ciò che facciamo.
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export default function Lazienda() {
               Il Nostro <span className={styles.titleGradient}>Team</span>
             </h2>
             <p className={styles.teamSubtitle}>
-              Un gruppo di professionisti appassionati, uniti dalla voglia di creare eventi straordinari. Ogni membro del nostro team porta competenze uniche e un'energia contagiosa in ogni progetto.
+              Un gruppo di professionisti appassionati, uniti dalla voglia di creare eventi straordinari. Ogni membro del nostro team porta competenze uniche e un&apos;energia contagiosa in ogni progetto.
             </p>
           </div>
 

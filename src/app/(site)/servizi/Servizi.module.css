@@ -327,6 +327,12 @@
     grid-template-columns: 1fr !important;
     gap: 3rem;
   }
+  .serviceGridAlt .serviceImageWrapper {
+    order: 2;
+  }
+  .serviceBtn {
+    align-self: center;
+  }
   .featuresGrid {
     grid-template-columns: 1fr;
     gap: 0.8rem;

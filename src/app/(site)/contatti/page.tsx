@@ -10,6 +10,7 @@ export default function Contatti() {
     telefono: "",
     tipoEvento: "",
     messaggio: "",
+    website: "", // honeypot anti-spam: deve restare vuoto
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,9 +36,9 @@ export default function Contatti() {
       }
 
       setSubmitted(true);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Submit error:", err);
-      setErrorMsg(err?.message || "Si è verificato un errore durante l'invio. Riprova più tardi.");
+      setErrorMsg((err instanceof Error && err.message) || "Si è verificato un errore durante l'invio. Riprova più tardi.");
     } finally {
       setIsSubmitting(false);
     }
@@ -76,13 +77,29 @@ export default function Contatti() {
                   <button 
                     className={styles.submitBtn} 
                     style={{ marginTop: "2rem" }} 
-                    onClick={() => { setSubmitted(false); setFormData({ nome: "", email: "", telefono: "", tipoEvento: "", messaggio: "" }); }}
+                    onClick={() => { setSubmitted(false); setFormData({ nome: "", email: "", telefono: "", tipoEvento: "", messaggio: "", website: "" }); }}
                   >
-                    Invia un'altra richiesta
+                    Invia un&apos;altra richiesta
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
+                  {/* Honeypot: invisibile agli utenti, i bot lo compilano */}
+                  <div
+                    aria-hidden="true"
+                    style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }}
+                  >
+                    <label htmlFor="website">Non compilare questo campo</label>
+                    <input
+                      type="text"
+                      id="website"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.website}
+                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                    />
+                  </div>
                   <div className={styles.formGroupRow}>
                     <div className={styles.formGroup}>
                       <label htmlFor="nome" className={styles.formLabel}>Nome e Cognome *</label>

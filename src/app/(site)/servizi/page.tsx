@@ -42,7 +42,7 @@ export default function Servizi() {
               
               <h2 className={styles.serviceTitle}>Service Audio</h2>
               <p className={styles.serviceDesc}>
-                Offriamo sistemi audio all'avanguardia per concerti, festival, conferenze ed eventi aziendali. Dalla piccola sala congressi al grande palco outdoor, garantiamo sempre la massima qualità sonora con impianti dimensionati ad hoc.
+                Offriamo sistemi audio all&apos;avanguardia per concerti, festival, conferenze ed eventi aziendali. Dalla piccola sala congressi al grande palco outdoor, garantiamo sempre la massima qualità sonora con impianti dimensionati ad hoc.
               </p>
               
               <div className={styles.featuresGrid}>
@@ -71,7 +71,7 @@ export default function Servizi() {
             <div className={styles.serviceImageWrapper}>
               <div className={styles.serviceImageInner}>
                 <Image
-                  src="/images/audio_console.png"
+                  src="/images/original/servizi-audio.jpg"
                   alt="Professional audio console mixing"
                   width={680}
                   height={425}
@@ -91,7 +91,7 @@ export default function Servizi() {
             <div className={styles.serviceImageWrapper}>
               <div className={styles.serviceImageInner}>
                 <Image
-                  src="/images/stage_lights.png"
+                  src="/images/original/servizi-luci.jpg"
                   alt="Concert stage lights installation"
                   width={680}
                   height={425}
@@ -113,7 +113,7 @@ export default function Servizi() {
 
               <h2 className={styles.serviceTitle}>Service Luci</h2>
               <p className={styles.serviceDesc}>
-                Il nostro servizio di illuminazione professionale trasforma qualsiasi ambiente in uno spazio suggestivo. Dalle teste mobili agli effetti LED, passando per l'illuminazione architetturale, creiamo atmosfere uniche che amplificano l'impatto emotivo di ogni evento.
+                Il nostro servizio di illuminazione professionale trasforma qualsiasi ambiente in uno spazio suggestivo. Dalle teste mobili agli effetti LED, passando per l&apos;illuminazione architetturale, creiamo atmosfere uniche che amplificano l&apos;impatto emotivo di ogni evento.
               </p>
               
               <div className={styles.featuresGrid}>
@@ -189,7 +189,7 @@ export default function Servizi() {
             <div className={styles.serviceImageWrapper}>
               <div className={styles.serviceImageInner}>
                 <Image
-                  src="/images/corporate_event.png"
+                  src="/images/original/servizi-video.jpg"
                   alt="Ledwall corporate display setup"
                   width={680}
                   height={425}
@@ -208,7 +208,7 @@ export default function Servizi() {
             <div className={styles.serviceImageWrapper}>
               <div className={styles.serviceImageInner}>
                 <Image
-                  src="/images/truss_structure.png"
+                  src="/images/original/servizi-allestimenti.jpg"
                   alt="Stage truss structure layout"
                   width={680}
                   height={425}
