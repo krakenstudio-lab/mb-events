@@ -18,9 +18,12 @@ export const metadata: Metadata = {
   creator: "MB Events",
   metadataBase: new URL("https://mbevents.eu"),
   icons: {
-    icon: "/images/logo-mb-events.png",
-    shortcut: "/images/logo-mb-events.png",
-    apple: "/images/logo-mb-events.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
   },
   openGraph: {
     title: "MB Events | Service Audio, Luci, Video e Allestimenti per Eventi",
@@ -29,10 +32,10 @@ export const metadata: Metadata = {
     siteName: "MB Events",
     images: [
       {
-        url: "/images/logo-mb-events.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "MB Events Logo - Service Audio, Luci, Video e Allestimenti",
+        alt: "MB Events - Service Audio, Luci, Video e Allestimenti",
       },
     ],
     locale: "it_IT",
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MB Events | Service Audio, Luci, Video e Allestimenti",
     description: "Soluzioni tecniche trasparenti e professionali per ogni tipo di evento.",
-    images: ["/images/logo-mb-events.png"],
+    images: ["/images/og-image.png"],
   },
 };
 
