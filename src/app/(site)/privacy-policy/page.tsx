@@ -1,5 +1,13 @@
 import Link from "next/link";
 import styles from "./Privacy.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Informativa sul trattamento dei dati personali di MB Events.",
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: { title: "Privacy Policy | MB Events", description: "Informativa sul trattamento dei dati personali di MB Events.", url: "/privacy-policy", siteName: "MB Events", locale: "it_IT", type: "website", images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "MB Events - Service Audio, Luci, Video e Allestimenti" }] },
+};
 
 export default function PrivacyPolicy() {
   return (

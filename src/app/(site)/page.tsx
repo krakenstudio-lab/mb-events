@@ -10,7 +10,7 @@ export default function Home() {
         <div className={styles.heroBackground}>
           <Image
             src="/images/original/home-hero.jpg"
-            alt="Stage Lights Background"
+            alt="Palco con luci scenografiche durante un evento live"
             fill
             priority
             quality={90}
@@ -62,7 +62,7 @@ export default function Home() {
               <div className={styles.partnerImageInner}>
                 <Image
                   src="/images/original/il-tuo-partner.jpg"
-                  alt="Stage lights concert setup"
+                  alt="Allestimento luci e audio per concerto sul palco"
                   width={680}
                   height={425}
                   className={styles.partnerImage}
@@ -157,7 +157,7 @@ export default function Home() {
             <Link href="/portfolio" className={styles.workCard}>
               <Image
                 src="/images/stage_lights.png"
-                alt="Festival Musicale Milano"
+                alt="Palco con impianto audio e luci per festival musicale"
                 fill
                 className={styles.workImage}
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -172,7 +172,7 @@ export default function Home() {
             <Link href="/portfolio" className={styles.workCard}>
               <Image
                 src="/images/corporate_event.png"
-                alt="Conferenza Tech Summit"
+                alt="Sala conferenze con ledwall e audio per evento aziendale"
                 fill
                 className={styles.workImage}
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -187,7 +187,7 @@ export default function Home() {
             <Link href="/portfolio" className={styles.workCard}>
               <Image
                 src="/images/wedding_venue.png"
-                alt="Matrimonio Villa Borghese"
+                alt="Location per matrimonio con illuminazione e allestimento"
                 fill
                 className={styles.workImage}
                 sizes="(max-width: 768px) 100vw, 33vw"

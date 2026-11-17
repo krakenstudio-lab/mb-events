@@ -1,5 +1,13 @@
 import Image from "next/image";
 import styles from "./Azienda.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "L'Azienda",
+  description: "Scopri MB Events: storia, missione e team di professionisti del service audio, luci e video per eventi con sede a Ferrara.",
+  alternates: { canonical: "/l-azienda" },
+  openGraph: { title: "L'Azienda | MB Events", description: "Scopri MB Events: storia, missione e team di professionisti del service audio, luci e video per eventi con sede a Ferrara.", url: "/l-azienda", siteName: "MB Events", locale: "it_IT", type: "website", images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "MB Events - Service Audio, Luci, Video e Allestimenti" }] },
+};
 
 export default function Lazienda() {
   return (
@@ -40,7 +48,7 @@ export default function Lazienda() {
               <div className={styles.historyImageInner}>
                 <Image
                   src="/images/original/azienda-storia.jpg"
-                  alt="MB Events History concert stage lights"
+                  alt="Luci da palco durante un concerto, la storia di MB Events"
                   width={680}
                   height={425}
                   className={styles.historyImage}
@@ -84,7 +92,7 @@ export default function Lazienda() {
               <div className={styles.missionImageInner}>
                 <Image
                   src="/images/original/azienda-mission.jpg"
-                  alt="MB Events Mission stage structure setup"
+                  alt="Struttura di un palco allestito dal team MB Events"
                   width={680}
                   height={425}
                   className={styles.missionImage}

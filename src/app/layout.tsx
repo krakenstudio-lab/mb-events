@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   authors: [{ name: "MB Events" }],
   creator: "MB Events",
   metadataBase: new URL("https://mbevents.eu"),
+  alternates: { canonical: "/" },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

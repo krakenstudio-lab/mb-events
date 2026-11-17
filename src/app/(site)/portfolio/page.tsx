@@ -100,7 +100,7 @@ export default function Portfolio() {
               <div key={project.id} className={styles.projectCard}>
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - evento ${project.category.toLowerCase()} con service MB Events`}
                   fill
                   className={styles.projectImage}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -1,5 +1,13 @@
 import Link from "next/link";
 import styles from "./Cookie.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy",
+  description: "Informativa sull'uso dei cookie sul sito di MB Events.",
+  alternates: { canonical: "/cookie-policy" },
+  openGraph: { title: "Cookie Policy | MB Events", description: "Informativa sull'uso dei cookie sul sito di MB Events.", url: "/cookie-policy", siteName: "MB Events", locale: "it_IT", type: "website", images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "MB Events - Service Audio, Luci, Video e Allestimenti" }] },
+};
 
 export default function CookiePolicy() {
   return (

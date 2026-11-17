@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Servizi.module.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Servizi Audio, Luci, Video e Allestimenti",
+  description: "Noleggio e installazione di impianti audio, luci, ledwall e strutture per concerti, eventi aziendali e matrimoni. Service professionale a Ferrara e in tutta Italia.",
+  alternates: { canonical: "/servizi" },
+  openGraph: { title: "Servizi Audio, Luci, Video e Allestimenti | MB Events", description: "Noleggio e installazione di impianti audio, luci, ledwall e strutture per concerti, eventi aziendali e matrimoni. Service professionale a Ferrara e in tutta Italia.", url: "/servizi", siteName: "MB Events", locale: "it_IT", type: "website", images: [{ url: "/images/og-image.png", width: 1200, height: 630, alt: "MB Events - Service Audio, Luci, Video e Allestimenti" }] },
+};
 
 export default function Servizi() {
   const checkIcon = (
@@ -72,7 +80,7 @@ export default function Servizi() {
               <div className={styles.serviceImageInner}>
                 <Image
                   src="/images/original/servizi-audio.jpg"
-                  alt="Professional audio console mixing"
+                  alt="Mixer audio professionale per service di eventi"
                   width={680}
                   height={425}
                   className={styles.serviceImage}
@@ -92,7 +100,7 @@ export default function Servizi() {
               <div className={styles.serviceImageInner}>
                 <Image
                   src="/images/original/servizi-luci.jpg"
-                  alt="Concert stage lights installation"
+                  alt="Installazione di luci da palco per concerti"
                   width={680}
                   height={425}
                   className={styles.serviceImage}
@@ -190,7 +198,7 @@ export default function Servizi() {
               <div className={styles.serviceImageInner}>
                 <Image
                   src="/images/original/servizi-video.jpg"
-                  alt="Ledwall corporate display setup"
+                  alt="Ledwall allestito per evento aziendale"
                   width={680}
                   height={425}
                   className={styles.serviceImage}
@@ -209,7 +217,7 @@ export default function Servizi() {
               <div className={styles.serviceImageInner}>
                 <Image
                   src="/images/original/servizi-allestimenti.jpg"
-                  alt="Stage truss structure layout"
+                  alt="Strutture e americane per allestimento palco"
                   width={680}
                   height={425}
                   className={styles.serviceImage}
